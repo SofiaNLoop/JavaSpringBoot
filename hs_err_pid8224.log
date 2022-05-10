@@ -1,0 +1,195 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 234881024 bytes for Failed to commit area from 0x0000000721000000 to 0x000000072f000000 of length 234881024.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3390), pid=8224, tid=17196
+#
+# JRE version:  (11.0.15+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.15+10-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=windows-1252 -Duser.country=CO -Duser.language=es -Duser.variant com.co.ias.products.ProductsApplication
+
+Host: AMD Ryzen 3 3200G with Radeon Vega Graphics    , 4 cores, 13G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1645)
+Time: Mon May  9 16:05:11 2022 Hora est. Pacífico, Sudamérica elapsed time: 0.288925 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000200d6c23000):  JavaThread "Unknown thread" [_thread_in_vm, id=17196, stack(0x0000003406f00000,0x0000003407000000)]
+
+Stack: [0x0000003406f00000,0x0000003407000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x62819a]
+V  [jvm.dll+0x7b55c9]
+V  [jvm.dll+0x7b6cb8]
+V  [jvm.dll+0x7b7393]
+V  [jvm.dll+0x2532f8]
+V  [jvm.dll+0x62543a]
+V  [jvm.dll+0x619c95]
+V  [jvm.dll+0x30bcec]
+V  [jvm.dll+0x30bb72]
+V  [jvm.dll+0x310886]
+V  [jvm.dll+0x35858f]
+V  [jvm.dll+0x357fc0]
+V  [jvm.dll+0x2e84a8]
+V  [jvm.dll+0x2e9606]
+V  [jvm.dll+0x78f567]
+V  [jvm.dll+0x790cf1]
+V  [jvm.dll+0x3653b9]
+V  [jvm.dll+0x772430]
+V  [jvm.dll+0x3d637f]
+V  [jvm.dll+0x3d8711]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000200d4af9570, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000200d6c3d000 GCTaskThread "GC Thread#0" [stack: 0x0000003407000000,0x0000003407100000] [id=1676]
+  0x00000200d6c8e000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000003407100000,0x0000003407200000] [id=9524]
+  0x00000200d6c90800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000003407200000,0x0000003407300000] [id=12256]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb76f182f7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000200d6c20970] Heap_lock - owner thread: 0x00000200d6c23000
+
+Heap address: 0x0000000721000000, size: 3568 MB, Compressed Oops mode: Non-zero based: 0x0000000721000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.012 Loaded shared library C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff793b10000 - 0x00007ff793b1d000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\java.exe
+0x00007ffbbefb0000 - 0x00007ffbbf1a5000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffbbee50000 - 0x00007ffbbef0e000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffbbc720000 - 0x00007ffbbc9e8000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffbbce40000 - 0x00007ffbbcf40000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffbb88c0000 - 0x00007ffbb88d7000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\jli.dll
+0x00007ffbbebd0000 - 0x00007ffbbed70000 	C:\Windows\System32\USER32.dll
+0x00007ffbbcf40000 - 0x00007ffbbcf62000 	C:\Windows\System32\win32u.dll
+0x00007ffbbdc70000 - 0x00007ffbbdc9a000 	C:\Windows\System32\GDI32.dll
+0x00007ffbbcd30000 - 0x00007ffbbce3b000 	C:\Windows\System32\gdi32full.dll
+0x00007ffbbc9f0000 - 0x00007ffbbca8d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffbb88e0000 - 0x00007ffbb88f5000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\VCRUNTIME140.dll
+0x00007ffba8c30000 - 0x00007ffba8eca000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffbbdaf0000 - 0x00007ffbbdb8e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffbbddf0000 - 0x00007ffbbde20000 	C:\Windows\System32\IMM32.DLL
+0x00007ffb827f0000 - 0x00007ffb8288b000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\msvcp140.dll
+0x00007ffb76c20000 - 0x00007ffb777b1000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\server\jvm.dll
+0x00007ffbbde20000 - 0x00007ffbbdece000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffbbd140000 - 0x00007ffbbd1dc000 	C:\Windows\System32\sechost.dll
+0x00007ffbbdca0000 - 0x00007ffbbddc5000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffbbd540000 - 0x00007ffbbd548000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffba5290000 - 0x00007ffba5299000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffbbded0000 - 0x00007ffbbdf3b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffbb1520000 - 0x00007ffbb1547000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffbb5310000 - 0x00007ffbb531a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffbba5d0000 - 0x00007ffbba5e2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffbb8600000 - 0x00007ffbb8610000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\verify.dll
+0x00007ffbb2fa0000 - 0x00007ffbb3184000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffbaacc0000 - 0x00007ffbaacec000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffbbca90000 - 0x00007ffbbcb12000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffbb6b20000 - 0x00007ffbb6b48000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\java.dll
+0x00007ffbb85f0000 - 0x00007ffbb85fa000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\jimage.dll
+0x00007ffbb6b00000 - 0x00007ffbb6b18000 	C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=windows-1252 -Duser.country=CO -Duser.language=es -Duser.variant 
+java_command: com.co.ias.products.ProductsApplication
+java_class_path (initial): S:\IASsemillero\products\build\classes\java\main;S:\IASsemillero\products\build\resources\main;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-devtools\2.6.7\165072232fe9adeb7d5a730f01587e17a36d971e\spring-boot-devtools-2.6.7.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\2.6.7\d877d6b14397f0c4b3a1611149a37eaf47f32195\spring-boot-starter-web-2.6.7.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-json\2.6.7\6f50e3003a0fff41ff571d52041146a19010761c\spring-boot-starter-json-2.6.7.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\2.6.7\59bd62cd60e6e7bb2a525931947c13548b207288\spring-boot-starter-2.6.7.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\2.6.7\d96e51e7a13f16c07f60654071f157f99a0b99be\spring-boot-autoconfigure-2.6.7.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\2.6.7\aef2fff50d49feb43a0726ab7e4945914186e06\spring-boot-2.6.7.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\2.6.7\22b09d173a3ca971e2f344229c13a105695ee45c\spring-boot-starter-tomcat-2.6.7.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\5.3.19\ba2fc03a3bcc925458e1179ef88f5833fb1971d\spring-webmvc-5.3.19.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\5.3.19\cdffc649d28d360d5891244e45277aa135ac647d\spring-web-5.3.19.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\5.3.19\d663259767f8fb66229209db0422d65978235525\spring-context-5.3.19.jar;C:\Users\raque\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\5.3.19\339b0ad295a7af51ac716bd89d36a4fb0febaf5d\spring-aop-5.3.19.jar;C:\Users\raque\.gradle\cac
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 234881024                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3741319168                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\raque\AppData\Local\Java\zulu11.56.19-ca-jdk11.0.15-win_x64\zulu11.56.19-ca-jdk11.0.15-win_x64
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Python39\Scripts\;C:\Program Files\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;S:\AppPrograming\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\ProgramData\chocolatey\bin;S:\AppPrograming\Node\;C:\Program Files\MongoDB\Server\5.0\bin;S:\MongoDB\mongosh-1.3.0-win32-x64\bin;C:\Users\raque\AppData\Local\Microsoft\WindowsApps;S:\AppPrograming\xampp\php;E:\Programas E\Git\Git\cmd;C:\Users\raque\AppData\Local\GitHubDesktop\bin;C:\Users\raque\spicetify-cli;C:\Users\raque\AppData\Roaming\npm;S:\AppPrograming\VSCode\Microsoft VS Code\bin
+USERNAME=raque
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1645)
+OS uptime: 10 days 6:39 hours
+Hyper-V role detected
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 23 model 24 stepping 1 microcode 0x0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 14270M (2301M free)
+TotalPageFile size 14270M (AvailPageFile size 174M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 52M, peak: 276M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.15+10-LTS) for windows-amd64 JRE (Zulu11.56+19-CA) (11.0.15+10-LTS), built on Apr 17 2022 08:58:55 by "zulu_re" with MS VC++ 15.9 (VS2017)
+
+END.
