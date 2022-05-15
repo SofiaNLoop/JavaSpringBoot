@@ -15,7 +15,7 @@ import java.util.List;
  * @author raque
  */
 public interface ProductRepository {
-    Integer store(Product product);
+    void store(Product product);
     Product getId(ProductId productId);
     void update(Product product);
     void delete(ProductId productId);
